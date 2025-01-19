@@ -1,0 +1,5 @@
+# Import base values
+{{- include "base.values.yaml" . | nindent 0 }}
+
+# Override with environment-specific values
+{{- include "variants/development.yaml" . | nindent 0 }}

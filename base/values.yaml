@@ -1,0 +1,4 @@
+name: my-app
+replicas: 1
+image: my-app:latest
+port: 80
