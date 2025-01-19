@@ -1,5 +1,2 @@
-# Import base values
-{{- include "base.values.yaml" . | nindent 0 }}
-
-# Override with environment-specific values
-{{- include "variants/development.yaml" . | nindent 0 }}
+replicas: 1
+image: sipablorhuam/flask-app:v3
