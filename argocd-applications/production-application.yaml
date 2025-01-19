@@ -11,8 +11,10 @@ spec:
     path: base
     helm:
       valueFiles:
-        - ../environments/common/values.yaml
-        - ../environments/production/values.yaml
+        - ../common/values.yaml
+        - ../variants/production/values.yaml
+        - ../environments/production/image.yaml
+        - ../environments/production/replicas.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: production-namespace

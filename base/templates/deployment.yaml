@@ -19,3 +19,6 @@ spec:
           image: {{ .Values.image }}
           ports:
             - containerPort: {{ .Values.port }}
+          env:
+            - name: MY_ENV_VAR
+              value: {{ .Values.myEnvVar | default "default_value" }}

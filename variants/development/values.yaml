@@ -1,1 +1,2 @@
 perEnvironmentConfiguration: mydevelopment
+myEnvVar: "Database dev JDBC"
