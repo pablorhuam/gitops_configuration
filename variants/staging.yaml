@@ -1,2 +1,2 @@
 replicas: 2
-image: my-app:staging
+image: sipablorhuam/flask-app:v2

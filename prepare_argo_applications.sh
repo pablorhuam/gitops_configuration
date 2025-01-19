@@ -4,7 +4,7 @@
 environments=("production" "staging" "development")
 
 # Define the base repository URL and chart path
-repoURL="https://your-git-repo-url.git"
+repoURL="https://github.com/pablorhuam/gitops_configuration.git"
 chartPath="base"
 
 # Define the Argo CD project

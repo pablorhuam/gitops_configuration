@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: development-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/pablorhuam/gitops_configuration.git
+    targetRevision: HEAD
+    path: base
+    helm:
+      valueFiles:
+        - environments/development/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: development-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

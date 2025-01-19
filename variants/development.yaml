@@ -1,2 +1,2 @@
 replicas: 1
-image: my-app:dev
+image: sipablorhuam/flask-app:v3
