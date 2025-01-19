@@ -4,13 +4,13 @@ metadata:
   name: {{ .Values.name }}
 spec:
   replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
   template:
     metadata:
       labels:
         app: {{ .Values.name }}
-  selector:
-    matchLabels:
-      app: {{ .Values.name }}
     spec:
       containers:
         - name: {{ .Values.name }}
