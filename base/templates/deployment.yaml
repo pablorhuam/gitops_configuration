@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.name }}
   labels: 
-    specific: "{{ .Values.perEnvironmentConfiguration }}"
+    specific: {{ .Values.perEnvironmentConfiguration | quote }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
