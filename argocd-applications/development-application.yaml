@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: https://github.com/pablorhuam/gitops_configuration.git
     targetRevision: HEAD
-    # path: base
+    path: base
     helm:
       valueFiles:
-        - environments/development/values.yaml
+        - ../environments/development/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: development-namespace
@@ -19,3 +19,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+

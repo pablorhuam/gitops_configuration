@@ -8,6 +8,9 @@ spec:
     metadata:
       labels:
         app: {{ .Values.name }}
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
     spec:
       containers:
         - name: {{ .Values.name }}
