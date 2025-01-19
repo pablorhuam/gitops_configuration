@@ -8,10 +8,11 @@ spec:
   source:
     repoURL: https://github.com/pablorhuam/gitops_configuration.git
     targetRevision: HEAD
-    # path: base
+    path: base
     helm:
       valueFiles:
-        - environments/staging/values.yaml
+        - ../environments/common/values.yaml
+        - ../environments/staging/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: staging-namespace
@@ -19,3 +20,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
