@@ -1,2 +1,1 @@
-replicas: 2
 image: sipablorhuam/flask-app:v2

@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.name }}
+  annotation: 
+    specific: {{ .Values.perEnvironmentConfiguration }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
